@@ -3,93 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Book Store - ECE Catalogue</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        #top-frame, #left-frame, #right-frame {
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin: 5px;
-        }
-        #top-frame {
-background-color:darkgoldenrod;
-            text-align: center;
-        }
-        #left-frame {
-            float: left;
-            width: 20%;
-        }
-        #right-frame {
-            margin-left: 22%;
-        }
-        #navbar a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
+    <title>ECE Catalogue - Book Bliss</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
-    <div id="top-frame">
-        <img src="logo.png" alt="Logo" style="height: 150px;">
-        <h1>Pondicherry University</h1>
-        <div id="navbar">
-            <a href="home.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Registration</a>
-            <a href="catalogue.html">Catalogue</a>
-            <a href="cart.html">Cart</a>
+    <div class="container">
+        <div class="top-frame">
+            <div class="logo-container">
+                <img src="library.jpeg" alt="library logo" class="logo">
+                <h1>Library</h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="login.html">Login</a>
+                <a href="registration.html">Registration</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="cart.html">Cart</a>
+            </nav>
         </div>
-    </div>
-
-    <div id="left-frame">
-        <p><a href="cse.html" target="right-frame">CSE</a></p>
-        <p><a href="ece.html" target="right-frame">ECE</a></p>
-        <p><a href="eee.html" target="right-frame">EEE</a></p>
-        <p><a href="civil.html" target="right-frame">CIVIL</a></p>
-    </div>
-
-    <div id="right-frame">
-        <h2>ECE Books</h2>
-        <table>
-            <tr>
-                <th>Cover</th>
-                <th>Book</th>
-                <th>Author</th>
-                <th>Publisher</th>
-                <th>Price</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td><img src="ai.jpeg" alt="AI" style="height: 80px;"></td>
-                <td>AI</td>
-                <td>S. Russel</td>
-                <td>Princeton Hall</td>
-                <td>Rs 63</td>
-                <td><button>Add to cart</button></td>
-            </tr>
-            <tr>
-                <td><img src="VLSI.jpeg" alt="VLSI Design" style="height: 80px;"></td>
-                <td>VLSI Design</td>
-                <td>Debaprasad Das</td>
-                <td>McGraw Hill</td>
-                <td>Rs 75</td>
-                <td><button>Add to cart</button></td>
-            </tr>
-        </table>
+        <div class="main-content">
+            <div class="left-frame">
+                <ul>
+                    <h3>Categories</h3>
+                    <li><a href="cse.html">CSE</a></li>
+                    <li><a href="ece.html">ECE</a></li>
+                    <li><a href="eee.html">EEE</a></li>
+                    <li><a href="civil.html">CIVIL</a></li>
+                </ul>
+            </div>
+            <div class="right-frame">
+                <h2>ECE Catalogue</h2>
+                <table>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td><img src="book2.jpeg" alt="AI" style="height: 50px;"></td>
+                        <td>AI</td>
+                        <td>S. Russel</td>
+                        <td>Princeton Hall</td>
+                        <td>Rs 63</td>
+                        <td><button onclick="addToCart('AI', 'S. Russel', 'Princeton Hall', 'Rs 63')">Add to cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="book5.jpeg" alt="VLSI Design" style="height: 50px;"></td>
+                        <td>VLSI Design</td>
+                        <td>Douglas Smith</td>
+                        <td>McGraw Hill</td>
+                        <td>Rs 75</td>
+                        <td><button onclick="addToCart('VLSI Design', 'Douglas Smith', 'McGraw Hill', 'Rs 75')">Add to cart</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 </html>
